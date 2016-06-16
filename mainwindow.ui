@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>696</width>
+    <height>707</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Encryptor - by SaEeD  V0.1</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="currentIndex">
+       <number>2</number>
+      </property>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string>Key Generation</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_10">
+        <item>
+         <widget class="QGroupBox" name="groupBox">
+          <property name="title">
+           <string>RSA Key Generation</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_9">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_7">
+             <item>
+              <widget class="QLabel" name="label_6">
+               <property name="text">
+                <string>Private Key:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPlainTextEdit" name="txtRSAPrivateKey">
+               <property name="enabled">
+                <bool>true</bool>
+               </property>
+               <property name="readOnly">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_8">
+             <item>
+              <widget class="QLabel" name="label_7">
+               <property name="text">
+                <string>Public   Key: </string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPlainTextEdit" name="txtRSAPublicKey">
+               <property name="readOnly">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_8">
+             <item>
+              <widget class="QPushButton" name="btnGenRSAKeys">
+               <property name="text">
+                <string>Generate Keys</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="btnExportKeysToFile">
+               <property name="text">
+                <string>Export Keys to File</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btnClearRSAPage">
+             <property name="text">
+              <string>Clear</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_2">
+       <attribute name="title">
+        <string>File Cryptor</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_5">
+        <item>
+         <widget class="QGroupBox" name="groupBox_2">
+          <property name="title">
+           <string>File XOR Encryption / Decryption</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_2">
+           <item row="0" column="0">
+            <widget class="QLabel" name="label">
+             <property name="text">
+              <string>Filename:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLineEdit" name="txtXORFilename"/>
+           </item>
+           <item row="0" column="2">
+            <widget class="QPushButton" name="btnSelectXORFile">
+             <property name="text">
+              <string>Select File</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_2">
+             <property name="text">
+              <string>Key File:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QLineEdit" name="txtXORKeyFile">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="2">
+            <widget class="QPushButton" name="btnXORKeySelect">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="text">
+              <string>Select Key</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_3">
+             <property name="text">
+              <string>Passphrase:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QLineEdit" name="txtPassphrase"/>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="label_4">
+             <property name="text">
+              <string>Encryption Mode:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <layout class="QVBoxLayout" name="verticalLayout_2">
+             <item>
+              <widget class="QRadioButton" name="rdbtn_mode_file">
+               <property name="text">
+                <string>With Key File</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QRadioButton" name="rdbtn_mode_pass">
+               <property name="text">
+                <string>With Passphrase</string>
+               </property>
+               <property name="checked">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item row="4" column="0" colspan="3">
+            <layout class="QVBoxLayout" name="verticalLayout_3">
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_2">
+               <item>
+                <widget class="QPushButton" name="btnXOR">
+                 <property name="text">
+                  <string>Encrypt / Decrypt (XOR)</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="btnXORtoHex">
+                 <property name="enabled">
+                  <bool>false</bool>
+                 </property>
+                 <property name="text">
+                  <string>Convert to Hex</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <widget class="QPushButton" name="btnClearXORSection">
+               <property name="text">
+                <string>Clear</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox_6">
+          <property name="title">
+           <string>File RSA Encryption / Decryption</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout">
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_17">
+             <property name="text">
+              <string>Public Key File:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLineEdit" name="txtRSAFilename"/>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_15">
+             <property name="text">
+              <string>Filename:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <widget class="QPushButton" name="btnSelectRSAFile">
+             <property name="text">
+              <string>Select File</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_16">
+             <property name="text">
+              <string>Private Key File:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QLineEdit" name="txtRSAPrivKey"/>
+           </item>
+           <item row="1" column="2">
+            <widget class="QPushButton" name="btnRSAPrivKey">
+             <property name="text">
+              <string>Private Key File</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="2">
+            <widget class="QPushButton" name="btnRSAPubKey">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="text">
+              <string>Certificate File</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="label_18">
+             <property name="text">
+              <string>Mode:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QLineEdit" name="txtRSAPubKey">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <layout class="QVBoxLayout" name="verticalLayout">
+             <item>
+              <widget class="QRadioButton" name="rdbtn_encrypt">
+               <property name="text">
+                <string>Encryption</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QRadioButton" name="rdbtn_decrypt">
+               <property name="text">
+                <string>Decryption</string>
+               </property>
+               <property name="checked">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item row="4" column="0" colspan="3">
+            <layout class="QVBoxLayout" name="verticalLayout_4">
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_3">
+               <item>
+                <widget class="QPushButton" name="btnDecryptRSA">
+                 <property name="text">
+                  <string>Decrypt</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="btnEncryptRSA">
+                 <property name="enabled">
+                  <bool>false</bool>
+                 </property>
+                 <property name="text">
+                  <string>Encrypt</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <widget class="QPushButton" name="btnClearRSA_crypt_page">
+               <property name="text">
+                <string>Clear</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_3">
+       <attribute name="title">
+        <string>Programming</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_7">
+        <item>
+         <widget class="QGroupBox" name="groupBox_3">
+          <property name="title">
+           <string>Convert File</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_6">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_4">
+             <item>
+              <widget class="QLabel" name="label_9">
+               <property name="text">
+                <string>Filename:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="txtFileToHex"/>
+             </item>
+             <item>
+              <widget class="QPushButton" name="btnSelectFileForHex">
+               <property name="text">
+                <string>Browse File</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_6">
+             <item>
+              <widget class="QLabel" name="label_11">
+               <property name="text">
+                <string>Hex:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPlainTextEdit" name="txtHexFile"/>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_5">
+             <item>
+              <widget class="QPushButton" name="btnFileToHex">
+               <property name="text">
+                <string>Convert File to Hex</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="btnHexValuesExport">
+               <property name="text">
+                <string>Export Hex values to text file</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <tabstops>
+  <tabstop>tabWidget</tabstop>
+  <tabstop>txtRSAPrivateKey</tabstop>
+  <tabstop>txtRSAPublicKey</tabstop>
+  <tabstop>btnGenRSAKeys</tabstop>
+  <tabstop>btnExportKeysToFile</tabstop>
+  <tabstop>btnClearRSAPage</tabstop>
+  <tabstop>txtXORFilename</tabstop>
+  <tabstop>btnSelectXORFile</tabstop>
+  <tabstop>txtXORKeyFile</tabstop>
+  <tabstop>btnXORKeySelect</tabstop>
+  <tabstop>txtPassphrase</tabstop>
+  <tabstop>rdbtn_mode_file</tabstop>
+  <tabstop>rdbtn_mode_pass</tabstop>
+  <tabstop>btnXOR</tabstop>
+  <tabstop>btnXORtoHex</tabstop>
+  <tabstop>btnClearXORSection</tabstop>
+  <tabstop>txtRSAFilename</tabstop>
+  <tabstop>btnSelectRSAFile</tabstop>
+  <tabstop>txtRSAPrivKey</tabstop>
+  <tabstop>btnRSAPrivKey</tabstop>
+  <tabstop>txtRSAPubKey</tabstop>
+  <tabstop>btnRSAPubKey</tabstop>
+  <tabstop>rdbtn_encrypt</tabstop>
+  <tabstop>rdbtn_decrypt</tabstop>
+  <tabstop>btnDecryptRSA</tabstop>
+  <tabstop>btnEncryptRSA</tabstop>
+  <tabstop>btnClearRSA_crypt_page</tabstop>
+  <tabstop>txtFileToHex</tabstop>
+  <tabstop>btnSelectFileForHex</tabstop>
+  <tabstop>txtHexFile</tabstop>
+  <tabstop>btnFileToHex</tabstop>
+  <tabstop>btnHexValuesExport</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>txtRSAFilename</sender>
+   <signal>returnPressed()</signal>
+   <receiver>btnSelectRSAFile</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>561</x>
+     <y>355</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>627</x>
+     <y>359</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>txtRSAPrivKey</sender>
+   <signal>returnPressed()</signal>
+   <receiver>btnRSAPrivKey</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>563</x>
+     <y>388</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>622</x>
+     <y>387</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>txtXORFilename</sender>
+   <signal>returnPressed()</signal>
+   <receiver>btnSelectXORFile</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>477</x>
+     <y>79</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>621</x>
+     <y>71</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>txtXORKeyFile</sender>
+   <signal>returnPressed()</signal>
+   <receiver>btnXORKeySelect</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>561</x>
+     <y>104</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>601</x>
+     <y>105</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
